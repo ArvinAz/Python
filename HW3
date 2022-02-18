@@ -1,0 +1,34 @@
+#gather the amount invested
+principal = float(input("What is the amount per month you will be investing?"))
+principal *= 12
+
+#find out what the rate is and do data validation to ensure it is a percent
+rate = float(input("What rate do you expect to earn yearly"))
+if(rate > 1):
+   rate /= 100
+
+#find out how long this will be for
+time = int(input("How many years do you expect to old this investment?"))
+
+#calculate the return for every five years
+for i in range(0, time+1, 5):
+  FV = principal*(1+rate)**i
+  #print("The future value is", FV)
+  print(f'{i} \t${FV:.2f}')
+  
+  
+  #gather the amount invested
+principal = float(input("What is the future value?"))
+
+
+#find out what the rate is and do data validation to ensure it is a percent
+rate = float(input("What rate do you expect to earn yearly"))
+if(rate > 1):
+   rate /= 100
+
+#find out how long this will be for
+time = int(input("How many years do you expect to old this investment?"))
+
+
+PV = principal/(1+rate)**time
+print(f"The present value of your investment is ${PV:,.2f}")
