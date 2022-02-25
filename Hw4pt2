@@ -1,0 +1,13 @@
+item_weight = int(input("Enter the weight of the package: "))
+item_price = 0
+
+if(item_weight<=2):
+  item_price = 1.50
+elif(item_weight>2 and item_weight<=6):
+  item_price = 3.00
+elif(item_weight>6 and item_weight<=10):
+  item_price = 4.00
+elif(item_price > 10):
+  item_price = 4.75
+
+print(f"The shipping charges are ${item_price:,.2f} per pound")
