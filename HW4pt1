@@ -1,0 +1,22 @@
+item_price = 99
+amount = 0
+discount = 0
+total_price = 0
+
+#ask the user for the number ordered
+amount = int(input("How many would you like to purchase"))
+if(amount >= 10 and amount <= 19):
+  discount = .1
+elif(amount >= 20 and amount <= 49):
+  discount = .2
+elif(amount >= 50 and amount <= 99):
+  discount = .3
+elif(amount >= 100):
+  discount = .4
+
+#print the total
+print(f"The discount is {discount*100}%")
+
+#print the total price
+total_price = amount*item_price*(1-discount)
+print(f"The total price is {total_price:,.2f}")
